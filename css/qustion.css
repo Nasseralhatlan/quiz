@@ -1,0 +1,47 @@
+/*
+QUSTION STYLES
+*/
+:root{
+
+}
+
+.qustion-cont{
+    position: relative;
+    width: 95vw;
+    height: 170vw;
+    left: 2.5vw;
+    right: 2.5vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+img{
+    position: relative;
+    width: 100%;
+    height: 95vw;
+    border-radius: 10px;
+}
+
+span{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.option{
+    font-size: 15px;
+    height: 100px;
+    text-align: center;
+    background-color: blanchedalmond;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-self: center;
+    align-items: center;
+    font-weight: 300;
+}

@@ -23,6 +23,9 @@ const quiz_status = {
 
 const buttonSound = new Audio();
 buttonSound.src = './audio/button_sound.mp3';
+const uclThemeSong = new Audio();
+uclThemeSong.src = './audio/ucl_theme_song.mp3';
+const firstTime = true;
 
 
 function loadQustions(){
@@ -49,7 +52,6 @@ function loadQustions(){
 }
 
 function chooseAnswer(e){
-    buttonSound.play();
     id  =  e.target.attributes.id.value;
     qus =  id.split(".")[0];
     ans =  id.split(".")[1];
@@ -58,6 +60,10 @@ function chooseAnswer(e){
     document.getElementById(qus+".3").classList.remove("active");;
     document.getElementById(qus+".4").classList.remove("active");;
     document.getElementById(id).classList.add("active");
+    if(firstTime){
+        uclThemeSong.play();
+        firstTime = false;
+    }
 }
 
 function submitAll(){

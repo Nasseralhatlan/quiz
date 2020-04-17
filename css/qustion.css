@@ -51,12 +51,12 @@ span{
     align-items: center;
     font-weight: 300;
     color: white;
-    transition: 0.3s;
+    transition: 0.2s;
     cursor: pointer;
 }
 
 .option:hover{
-    background-color: #61853e;
+    background-color: #b088dd;
 }
 .active{
     background-color: #87b955 !important;

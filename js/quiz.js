@@ -41,7 +41,7 @@ function loadQustions(){
             document.body.innerHTML += html;
     })
 
-    document.body.innerHTML += `<button onclick="submitAll()"> submit </button>`;
+    document.body.innerHTML += `<form action=""><button type="submit" onclick="submitAll()"> submit </button><form>`;
 }
 
 function chooseAnswer(e){

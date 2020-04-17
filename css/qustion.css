@@ -42,7 +42,7 @@ span{
     font-size: 15px;
     height: 100px;
     text-align: center;
-    background-color: rgb(68, 45, 122);
+    background-color: #804dbb;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
@@ -50,4 +50,14 @@ span{
     justify-self: center;
     align-items: center;
     font-weight: 300;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.option:hover{
+    background-color: #61853e;
+}
+.active{
+    background-color: #87b955 !important;
 }

@@ -21,6 +21,10 @@ const quiz_status = {
    score : 0 ,
 }
 
+const buttonSound = new Audio();
+buttonSound.src = './audio/button_sound.mp3';
+
+
 function loadQustions(){
     quations.forEach((qus,id) => {
         html = `
@@ -45,6 +49,7 @@ function loadQustions(){
 }
 
 function chooseAnswer(e){
+    buttonSound.play();
     id  =  e.target.attributes.id.value;
     qus =  id.split(".")[0];
     ans =  id.split(".")[1];
@@ -52,7 +57,7 @@ function chooseAnswer(e){
     document.getElementById(qus+".2").classList.remove("active");;
     document.getElementById(qus+".3").classList.remove("active");;
     document.getElementById(qus+".4").classList.remove("active");;
-    document.getElementById(id).classList.add("active");    
+    document.getElementById(id).classList.add("active");
 }
 
 function submitAll(){

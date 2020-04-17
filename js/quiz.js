@@ -17,15 +17,18 @@ const quations = [
     },
 ]
 
+const sound = new Audio();
+sound.loop = true;
+var first = true;
+sound.src = "./audio/UCL_theme_song_fadein.mp3";
+
+
 const quiz_status = {
    score : 0 ,
+   outof :  quations.length ,
 }
 
-const buttonSound = new Audio();
-buttonSound.src = './audio/button_sound.mp3';
-const uclThemeSong = new Audio();
-uclThemeSong.src = './audio/ucl_theme_song.mp3';
-const firstTime = true;
+
 
 
 function loadQustions(){
@@ -48,8 +51,9 @@ function loadQustions(){
             document.body.innerHTML += html;
     })
 
-    document.body.innerHTML += `<form action=""><button type="submit" onclick="submitAll()"> submit </button><form>`;
+    document.body.innerHTML += `<button type="submit" onclick="submitAll()"> submit </button>`;    
 }
+
 
 function chooseAnswer(e){
     id  =  e.target.attributes.id.value;
@@ -60,15 +64,23 @@ function chooseAnswer(e){
     document.getElementById(qus+".3").classList.remove("active");;
     document.getElementById(qus+".4").classList.remove("active");;
     document.getElementById(id).classList.add("active");
-    if(firstTime){
-        uclThemeSong.play();
-        firstTime = false;
-    }
+
 }
 
 function submitAll(){
-    answers = document.querySelectorAll(".active");
-    alert("Are you sure you want to submit")
+    answers = document.querySelectorAll(".active");    
+    answers.forEach((item,index) => {
+        quiz_status.score += parseInt(item.attributes.value.value);
+    })
 }
 
-loadQustions();
+function start(){
+    loadQustions();
+    sound.play();
+    $("#start_overlay").fadeOut(2000);
+
+}
+
+
+
+

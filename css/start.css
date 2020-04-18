@@ -11,10 +11,11 @@ background-position: center;
 margin: 0px;
 padding: 0px;
 /* background-color: #071238; */
-background-color: #ff4ee7;
+background-color: #ccc8cc;
 transform: translateX(0%);
 transition: 1s;
 z-index: 10;
+overflow: hidden;
 }
 
 .hide_overlay{

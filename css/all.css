@@ -4,6 +4,7 @@ GENERAL AND GLOBAL STYLES
 
 html,body{
     font-family: 'Open Sans', sans-serif;
+    overflow: scroll;
 }
 
 .ar-font{

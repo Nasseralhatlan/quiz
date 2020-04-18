@@ -10,7 +10,8 @@ background-size: contain;
 background-position: center; 
 margin: 0px;
 padding: 0px;
-background-color: #071238;
+/* background-color: #071238; */
+background-color: #ff4ee7;
 transform: translateX(0%);
 transition: 1s;
 z-index: 10;

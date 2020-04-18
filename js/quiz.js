@@ -78,9 +78,9 @@ function start(lang){
     sound.play();
     loadQustions();
 
-    // setTimeout(function() {
-    //     document.getElementById("start_overlay").classList.add("hide_overlay");
-    // }, 2000);
+    setTimeout(function() {
+        document.getElementById("start_overlay").classList.add("hide_overlay");
+    }, 2000);
 
     
 }

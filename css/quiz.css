@@ -24,7 +24,7 @@ html,body{
     border-radius: 10px;
 }
 
-img{
+.qustion-cont img{
     position: relative;
     width: 100%;
     max-height: 95vw;

@@ -78,7 +78,6 @@ function start(){
     loadQustions();
     sound.play();
     $("#start_overlay").fadeOut(2000);
-
 }
 
 

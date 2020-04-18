@@ -1,17 +1,21 @@
 /*
 GENERAL AND GLOBAL STYLES
 */
+
 html,body{
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
     font-family: 'Open Sans', sans-serif;
-    background-image: url('../img/phone-wallpaper.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #071238;
+}
+
+.ar-font{
+    font-family: 'Tajawal', sans-serif !important;
+}
+
+.en-font{
+    font-family: 'Open Sans', sans-serif !important; 
+}
+
+.ch-font{
+        font-family: 'Noto Sans SC', sans-serif !important;
 }
 
 .row{
@@ -31,20 +35,6 @@ html,body{
     float: left;
 }
 
-#start_overlay{
-position: fixed;
-width: 100vw;
-height: 100vh;
-background-image: url('../img/start_bg.png');
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: cover;
-background-position: center; 
-z-index: 10;
-font-weight: 300;
-text-align: center;
-color: white;
-padding-top: 30px;
-font-size: 40px;
-cursor: pointer;
+a{
+    text-decoration: none;
 }

@@ -74,15 +74,9 @@ function submitAll(){
     })
 }
 
-function start(lang){
-    sound.play();
+function start(){
     loadQustions();
-
-    setTimeout(function() {
-        document.getElementById("start_overlay").classList.add("hide_overlay");
-    }, 2000);
-
-    
+    sound.play();
 }
 
 

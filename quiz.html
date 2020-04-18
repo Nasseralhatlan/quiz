@@ -5,14 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/quiz.css">
+    <link rel="stylesheet" href="./css/start.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
     <title>Quiz</title>
 </head>
 <body>  
-<script
-  src="https://code.jquery.com/jquery-3.5.0.min.js"
-  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
-  crossorigin="anonymous"></script>
+    <div id="start_overlay">
+        <div class="row margin">
+            <div class="col">
+               <a  onclick="start('ar')">
+                <div class="language ar ar-font">
+                    العربية 
+                </div>
+               </a> 
+            </div>
+            <div class="col">
+                <a  onclick="start('en')">
+                 <div class="language en en-font">
+                     english 
+                </div>
+                </a>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col">
+                <a  onclick="start('es')">
+                    <div class="language es en-font">
+                      espanol
+                </div>
+                </a>
+            </div> 
+            <div class="col">
+                <a  onclick="start('ch')">
+                    <div class="language ch ch-font">
+                     中文
+                </div>
+                </a>
+            </div>
+        </div>
+    </div>
 <script type="text/javascript" src="./js/quiz.js"></script>
 </body>
 </html>

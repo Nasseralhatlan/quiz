@@ -39,10 +39,15 @@ justify-items: center;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 2px;
+    border-radius: 5px;
+    border: 2px solid #ff000000;
     font-size: 20px;
     line-height: 150px;
     z-index: 12;
+}
+
+.language-choosen{
+    border: 2px solid #ffbb44 !important;
 }
 
 

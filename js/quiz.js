@@ -1,3 +1,4 @@
+
 const quationsEN = [
     {
         txt : "This a test qustion text",
@@ -17,6 +18,7 @@ const quationsEN = [
     },
 ]
 
+var started = false;
 const sound = new Audio();
 sound.loop = true;
 var first = true;
@@ -74,14 +76,28 @@ function submitAll(){
     })
 }
 
+
+
 function start(lang){
-    sound.play();
-    loadQustions();
+    if(!started){
+        started = true;
+        sound.play();
+        loadQustions();
+        if(lang == "ar"){
+            document.getElementsByClassName("ar")[0].classList.add("language-choosen");
+        }else if(lang == "en"){
+            document.getElementsByClassName("en")[0].classList.add("language-choosen");
+        }else if(lang == "es"){
+            document.getElementsByClassName("es")[0].classList.add("language-choosen");
+        }else if(lang == "ch"){
+            document.getElementsByClassName("ch")[0].classList.add("language-choosen");
+        }
+    
+        setTimeout(function() {
+            document.getElementById("start_overlay").classList.add("hide_overlay");
+        }, 2000);
 
-    setTimeout(function() {
-        document.getElementById("start_overlay").classList.add("hide_overlay");
-    }, 2000);
-
+    }
     
 }
 

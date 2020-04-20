@@ -32,7 +32,11 @@ const quiz_status = {
 
 
 
-
+function unloadQustions(){
+    document.querySelectorAll(".qustion-cont").forEach(qus=>{
+        qus.remove();
+    });
+}
 function loadQustions(){
     quationsEN.forEach((qus,id) => {
         html = `
@@ -74,6 +78,33 @@ function submitAll(){
     answers.forEach((item,index) => {
         quiz_status.score += parseInt(item.attributes.value.value);
     })
+    unloadQustions();
+    document.getElementById("result").classList.add("show_result");
+    $('.counter').each(function() {
+        var $this = $(this),
+            countTo = $this.attr('data-count');
+        
+        $({ countNum: $this.text().split("%")[0]}).animate({
+          countNum: countTo
+        },
+      
+        {
+      
+          duration: 8000,
+          easing:'linear',
+          step: function() {
+            num = Math.floor(this.countNum)
+            $this.text(num+"%");
+          },
+          complete: function() {
+            $this.text(this.countNum+"%");
+            //alert('finished');
+          }
+      
+        });  
+      });
+
+      
 }
 
 
@@ -81,7 +112,7 @@ function submitAll(){
 function start(lang){
     if(!started){
         started = true;
-        sound.play();
+        // sound.play();
         loadQustions();
         if(lang == "ar"){
             document.getElementsByClassName("ar")[0].classList.add("language-choosen");

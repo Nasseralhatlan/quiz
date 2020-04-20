@@ -1,21 +1,128 @@
 
 const quationsEN = [
     {
-        txt : "This a test qustion text",
-        img : "https://i.dailymail.co.uk/i/pix/2015/05/06/22/2862CE1000000578-3071013-image-m-7_1430949048701.jpg",
-        ans1 : ["A",0],
-        ans2 : ["B",0],
-        ans3 : ["C",1],
-        ans4 : ["D",0],
+        txt : "Which two teams played in the 2002 champions league final",
+        img : "./img/UEFA-CHAMPIONS-LEAGUE.jpg",
+        ans1 : ["Barcelona vs Arsenal",0],
+        ans2 : ["AC Mialn vs Juventus",0],
+        ans3 : ["Real Madrid vs Bayer leverkusen",1],
+        ans4 : ["AC Milan vs Liverpool ",0],
+
     },
     {
-        txt : "This a test qustion text",
-        img : "https://i.dailymail.co.uk/i/pix/2015/05/06/22/2862CE1000000578-3071013-image-m-7_1430949048701.jpg",
-        ans1 : ["A",0],
-        ans2 : ["B",0],
-        ans3 : ["C",1],
-        ans4 : ["D",0],
+        txt : "Who assisted zidane in this goal ?",
+        img : "./img/zidane-goal.jpeg",
+        ans1 : ["Robert carlos",1],
+        ans2 : ["Figo",0],
+        ans3 : ["Raul",0],
+        ans4 : ["Morienets",0],
     },
+    {
+        txt : "What was the final result of the 2002 champions league final?",
+        img : "./img/2002-ucl-final-match-card.png",
+        ans1 : ["BAY 0 - RM 2",0],
+        ans2 : ["BAY 1 - RM 2",1],
+        ans3 : ["BAY 2 - RM 3",0],
+        ans4 : ["BAY 2 - RM 1",0],
+    },
+    {
+        txt : "Which two teams played in the 2004 champions league final",
+        img : "./img/UEFA-CHAMPIONS-LEAGUE.jpg",
+        ans1 : ["Barcelona vs Arsenal",0],
+        ans2 : ["Chelese vs Bayren munech",0],
+        ans3 : ["Porto vs monaco",1],
+        ans4 : ["AC Milan vs Liverpool ",0],
+
+    },
+    {
+        txt : "Who was the top goalscorer in the 2005 chamions league ?",
+        img : "./img/goal-top_2005.png",
+        ans1 : ["Terry henry",0],
+        ans2 : ["Gerrard",0],
+        ans3 : ["Ruud van nistelrooy",1],
+        ans4 : ["Ronaldinho",0],
+
+    },
+    {
+        txt : "When was this historical goal by ronaldinho ?",
+        img : "./img/RON.jpg",
+        ans1 : ["2004 champions league Round of 16",0],
+        ans2 : ["2004 champions league semi final",0],
+        ans3 : ["2005 champions league Round of 16",1],
+        ans4 : ["2005 champions league semi final",0],
+
+    },
+    {
+        txt : "From what match this picture was ?",
+        img : "./img/07-Gerrard-Milan-2_3294832k.jpg",
+        ans1 : ["2003 champions league final",0],
+        ans2 : ["2005 champions league final",1],
+        ans3 : ["2003 champions league semi final",0],
+        ans4 : ["2005 champions league semi final",0],
+
+    },
+    {
+        txt : "At what minute did milan score the first goal of the 2005 champions league final ?",
+        img : "./img/maldini-goal-2005.jpg",
+        ans1 : ["1:00",1],
+        ans2 : ["7:00",0],
+        ans3 : ["3:00",0],
+        ans4 : ["12:00",0],
+
+    },
+    {
+        txt : "What was the ruslt of the first half of the 2005 UCL final ?",
+        img : "./img/pre-game-lineup-2005.jpg",
+        ans1 : ["Milan 3 - 0 Liverpool ",1],
+        ans2 : ["Milan 3 - 2 Liverpool ",0],
+        ans3 : ["Milan 2 - 1 Liverpool ",0],
+        ans4 : ["Milan 2 - 0 Liverpool ",0],
+
+    },
+    {
+        txt : "What was the final result of the 2005 UCL Final?",
+        img : "./img/2005-match-card.jpg",
+        ans1 : ["Milan 4 - 4 Liverpool , liverpool won by penalties",0],
+        ans2 : ["Milan 3 - 2 Liverpool",0],
+        ans3 : ["Milan 3 - 3 Liverpool , liverpool won by penalties",1],
+        ans4 : ["Milan 3 - 4 Liverpool ",0],
+
+    },
+    {
+        txt : "Who was the 2005 UCL Final man of the match ?",
+        img : "./img/2005-manOfTheMatch.png",
+        ans1 : ["Maldini",0],
+        ans2 : ["Xabi Alonso",0],
+        ans3 : ["Dudek",0],
+        ans4 : ["Steven gerard",1],
+    },
+    {
+        txt : "Where did the 2006 final took place?",
+        img : "./img/ucl-stad.png",
+        ans1 : ["Istanbul",0],
+        ans2 : ["Berlin",0],
+        ans3 : ["Paris",1],
+        ans4 : ["Londo",0],
+    },
+    {
+        txt : "From left to right fill the empty boxes with team that played in the 2006 ucl semi final and final?",
+        img : "./img/2006-uclGoldenBox.png",
+        ans1 : ["Milan - Arsenal - Villarreal",0],
+        ans2 : ["Barcelona - Chelsea - Chelsea",0],
+        ans3 : ["Barcelona - manchester united - manchester united",0],
+        ans4 : ["Barcelona - Arsenal - Villarreal",1],
+    },
+
+
+
+
+
+
+
+
+
+
+
 ]
 
 var started = false;
@@ -150,5 +257,5 @@ function copyLink(){
     clipboard.select();
     clipboard.setSelectionRange(0, 99999);
     document.execCommand("copy");
-    alert("Copied the text: "+clipboard.value);
+    alert("URL copyed");
 }

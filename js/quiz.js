@@ -79,10 +79,11 @@ function submitAll(){
         quiz_status.score += parseInt(item.attributes.value.value);
     })
     unloadQustions();
+
     document.getElementById("result").classList.add("show_result");
     $('.counter').each(function() {
         var $this = $(this),
-            countTo = $this.attr('data-count');
+            countTo = calcScorePercentage();
         
         $({ countNum: $this.text().split("%")[0]}).animate({
           countNum: countTo
@@ -112,7 +113,7 @@ function submitAll(){
 function start(lang){
     if(!started){
         started = true;
-        // sound.play();
+        sound.play();
         loadQustions();
         if(lang == "ar"){
             document.getElementsByClassName("ar")[0].classList.add("language-choosen");
@@ -133,6 +134,21 @@ function start(lang){
 }
 
 
+function calcScorePercentage(){
+    score = quiz_status.score;
+    outof = quiz_status.outof;
+    return (score/outof)*100;
+}
 
 
 
+function copyLink(){
+    url = window.location.href;
+    
+    clipboard = document.getElementById("clipboard");
+    clipboard.value = url;
+    clipboard.select();
+    clipboard.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    alert("Copied the text: "+clipboard.value);
+}

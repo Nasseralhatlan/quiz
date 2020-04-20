@@ -39,7 +39,7 @@ font-size: 30px;
 color: #ddaa4b;
 }
 
-.btn{
+.btn-share{
     position: absolute;
     width: 60px;
     height: 60px;
@@ -55,6 +55,6 @@ color: #ddaa4b;
     justify-items: center;
 }
 
-.btn svg{
+.btn-share svg{
    margin-top: 15px;
 }

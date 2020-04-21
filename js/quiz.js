@@ -234,7 +234,7 @@ function start(lang){
     
         setTimeout(function() {
             document.getElementById("start_overlay").classList.add("hide_overlay");
-        }, 2000);
+        }, 500);
 
     }
     
@@ -244,7 +244,7 @@ function start(lang){
 function calcScorePercentage(){
     score = quiz_status.score;
     outof = quiz_status.outof;
-    return (score/outof)*100;
+    return Math.floor((score/outof)*100);
 }
 
 

@@ -7,10 +7,8 @@ html,body{
     padding: 0px;
     margin: 0px;
     background-image: url('../img/phone-wallpaper.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #071238;
+    background-image: none ;
+    background-color: #1a1b6e;
 }
 
 .qustion-cont{
@@ -86,3 +84,35 @@ button{
     transition: 0.3s;
 }
 
+
+
+@media (min-width: 768px) {
+    html,body{
+        background-image: none ;
+        background-color: #1a1b6e;
+    }
+
+    .qustion-cont{
+        position: relative;
+        width: 50vw;
+        height: auto;
+        left: 25vw;
+        right: 25vw;
+        padding-top: 20px;
+        margin-bottom: 50px;
+        border-radius: 10px;
+    }
+
+
+    button{
+        width: 50vw;
+        left: 25vw;
+        right: 25vw;
+    }
+
+    button:hover{
+        background-color: #97dd2d;
+    }
+
+
+}

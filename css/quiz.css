@@ -6,9 +6,7 @@ html,body{
     height: 100%;
     padding: 0px;
     margin: 0px;
-    background-image: url('../img/phone-wallpaper.jpg');
-    background-image: none ;
-    background-color: #1a1b6e;
+    background-color: rgb(8, 15, 75);
 }
 
 .qustion-cont{
@@ -87,11 +85,6 @@ button{
 
 
 @media (min-width: 768px) {
-    html,body{
-        background-image: none ;
-        background-color: #1a1b6e;
-    }
-
     .qustion-cont{
         position: relative;
         width: 50vw;

@@ -61,7 +61,12 @@ function submitAll(){
     unloadQustions();
 
     scorePercantage = calcScorePercentage();
-    duration = scorePercantage > 50 ? 5000 : 3000  ;
+    duration = scorePercantage > 50 ? scorePercantage > 75 ? 8000:6000 : scorePercantage > 35 ? 4000:2000;
+
+    console.log(duration);
+    console.log(scorePercantage);
+    
+    
     document.getElementById("result").classList.add("show_result");
     $('.counter').each(function() {
         var $this = $(this),
@@ -118,7 +123,7 @@ function start(lang){
 
 function calcScorePercentage(){
     score = quiz_status.score;
-    outof = quiz_status.outof;
+    outof = quiz_status.outof;    
     return Math.floor((score/outof)*100);
 }
 
@@ -134,6 +139,10 @@ function copyLink(){
     alert("URL copyed");
 }
 
+function showAnswers(){
+
+
+}
 
 function pause(){
     sound.pause();
@@ -142,3 +151,4 @@ function pause(){
 function resume(){
     sound.play();
 }
+

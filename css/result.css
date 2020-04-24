@@ -34,6 +34,20 @@ font-family: 'Vibes', cursive;
 margin-top: 20px;
 }
 
+.btn-show-answers{
+    position: relative;
+    width: 40vw;
+    left: 28vw;
+    padding: 2vw;
+    text-align: center;
+    background-color: #8dbf42;
+    color: white;
+    border-radius: 4px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
 
 @media  (min-width: 768px) {
 
@@ -48,5 +62,16 @@ margin-top: 20px;
     .label_1{
         margin-top: 5vh;
     }
+
+    .btn-show-answers{
+        width: 10vw;
+        left: 44.5vw;
+        padding: 0.5vw;
+        bottom: 20px !important;
+    }
+    .btn-show-answers:hover{
+        background-color: #97dd2d;
+    }
+
 
 }

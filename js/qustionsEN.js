@@ -1,6 +1,14 @@
 const quationsEN = [
     {
-        txt : "Which player has the most UEFA Champions league final appearances",
+        txt : "Wich club has the most UEFA chamspions league titles ?",
+        img : "./img/qustions/Q15.jpg",
+        ans1 : ["Ac milan",0],
+        ans2 : ["Real madrid",1],
+        ans3 : ["Barcelona",0],
+        ans4 : ["Liverpool",0],
+    },
+    {
+        txt : "Which player has the most UEFA Champions league final appearances ?",
         img : "./img/qustions/Q1.jpg",
         ans1 : ["Edwin van der Sar",0],
         ans2 : ["Paolo maldini",1],
@@ -8,7 +16,7 @@ const quationsEN = [
         ans4 : ["Iker casillas",0],
     },
     {
-        txt : "Which player is All-time UEFA Champions League final top  scorer",
+        txt : "Which player is the All-time UEFA Champions League final top scorer ?",
         img : "./img/qustions/Q2.jpg",
         ans1 : ["Samuel Eto'o",0],
         ans2 : ["Lionel messi",0],
@@ -16,7 +24,7 @@ const quationsEN = [
         ans4 : ["Hernán Crespo",0],
     },
     {
-        txt : "Which playe has the Most goals in a single UEFA Champions Leaguefinal",
+        txt : "Which playe has the Most goals in a single UEFA Champions League final ?",
         img : "./img/qustions/Q3.jpg",
         ans1 : ["Gareth Bale",1],
         ans2 : ["David villa",0],
@@ -25,7 +33,7 @@ const quationsEN = [
     },
 
     {
-        txt : "Which coach has the most UEFA Champions League final wins",
+        txt : "Which coach has the most UEFA Champions League final wins ?",
         img : "./img/qustions/Q4.jpg",
         ans1 : ["Fabio capello",0],
         ans2 : ["Louis van Gaal",0],
@@ -34,7 +42,7 @@ const quationsEN = [
     },
 
     {
-        txt : "Which coach has the most UEFA Champions league final appearances",
+        txt : "Which coach has the most UEFA Champions league final appearances ?",
         img : "./img/qustions/Q5.jpg",
         ans1 : ["Diego simeone",0],
         ans2 : ["Sir alex ferguson",1],
@@ -42,7 +50,7 @@ const quationsEN = [
         ans4 : ["Jurgen klopp",0],
     },
     {
-        txt : "Which player hasn't won Champions League with more than one club",
+        txt : "Which player hasn't won Champions League with more than one club ?",
         img : "./img/qustions/Q6.jpg",
         ans1 : ["Samuel Eto'o",0],
         ans2 : ["Clarence Seedorf",0],
@@ -50,7 +58,7 @@ const quationsEN = [
         ans4 : ["Luís Figo",1],
     },
     {
-        txt : "Out of these clubs which club has the most UEFA Champions league final appearances",
+        txt : "Out of these clubs which club has the most UEFA Champions league final appearances ?",
         img : "./img/qustions/Q7.jpg",
         ans1 : ["Ajax",0],
         ans2 : ["Liverpool",0],
@@ -58,7 +66,7 @@ const quationsEN = [
         ans4 : ["Manchester United",0],
     },
     {
-        txt : "Which player has the most scoring ratio in UEFA champions League",
+        txt : "Which player has the most scoring ratio in UEFA champions League ?",
         img : "./img/qustions/Q8.jpg",
         ans1 : ["Lionel messi",1],
         ans2 : ["robert lewandowski",0],
@@ -66,7 +74,7 @@ const quationsEN = [
         ans4 : ["Eusebio",0],
     },
     {
-        txt : "Which club has the Most successive UEFA Champions league final wins",
+        txt : "Which club has the Most successive UEFA Champions league final wins ?",
         img : "./img/qustions/Q9.jpg",
         ans1 : ["Ac milan",0],
         ans2 : ["Real madrid",1],
@@ -74,17 +82,60 @@ const quationsEN = [
         ans4 : ["Juventus",0],
     },
     {
-        txt : "Which club has the most number of losses UEFA Champions League final",
+        txt : "Which club has the most number of losses in UEFA Champions League final ?",
         img : "./img/qustions/Q10.jpg",
-        ans1 : ["Ac milan",0],
-        ans2 : ["Real madrid",1],
-        ans3 : ["Barcelona",0],
-        ans4 : ["Juventus",0],
+        ans1 : ["Arsenal",0],
+        ans2 : ["Atlitco madrid",0],
+        ans3 : ["Dourtmoud",0],
+        ans4 : ["Juventus",1],
     },
-    
-
-    
-   
-    
+    {
+        txt : "Who is the oldest player to ever played in UEFA Champions League final ?",
+        img : "./img/qustions/Q11.jpg",
+        ans1 : ["Paolo maldini",0],
+        ans2 : ["Gianluigi Buffon",0],
+        ans3 : ["Ryan Giggs",0],
+        ans4 : ["Edwin van der Sar",1],
+    },
+    {
+        txt : "Who is the oldest player to ever won the UEFA Champions League final ?",
+        img : "./img/qustions/Q11.jpg",
+        ans1 : ["Paolo maldini",1],
+        ans2 : ["Gianluigi Buffon",0],
+        ans3 : ["Ryan Giggs",0],
+        ans4 : ["Edwin van der Sar",0],
+    },
+    {
+        txt : "Who is the youngest player to ever score in the UEFA Champions League ?",
+        img : "./img/qustions/Q13.jpg",
+        ans1 : ["Alen Halilović",0],
+        ans2 : ["Ansu Fati",1],
+        ans3 : ["Mbappe",0],
+        ans4 : ["Haaland",0],
+    },
+    {
+        txt : "After how many seconds was the fastest UEFA chamspions league goal ever ?",
+        img : "./img/qustions/Q14.jpg",
+        ans1 : ["10 s",1],
+        ans2 : ["14 s",0],
+        ans3 : ["5 s",0],
+        ans4 : ["7 s",0],
+    },
+    {
+        txt : "Which player has the most red cards in UEFA champions League history ?",
+        img : "./img/qustions/Q16.jpg",
+        ans1 : ["Drogba",0],
+        ans2 : ["Ramos",1],
+        ans3 : ["Verratti",0],
+        ans4 : ["Scholes",0],
+    },
+    {
+        txt : "Out of these clubs what club won the UEFA Champions League undefeated ?",
+        img : "./img/qustions/Q17.jpg",
+        ans1 : ["Dourtmoud",0],
+        ans2 : ["Chelsea",0],
+        ans3 : ["Barcelona",1],
+        ans4 : ["Bayren munich",0],
+    },
     
 ]

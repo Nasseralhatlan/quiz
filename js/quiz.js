@@ -8,7 +8,8 @@ sound.src = "./audio/UCL_theme_song_fadein.mp3";
 const quiz_status = {
    score : 0 ,
    outof :  quationsEN.length ,
-   lang : "EN"
+   lang : "EN",
+   html : ""
 }
 
 
@@ -29,6 +30,23 @@ function correctAnswers(){
            item.classList.add("correct")
        }
     })
+
+    allQustions = document.querySelectorAll(".qustion-cont");
+    allQustions.forEach( qus => {
+       id = qus.attributes.id.value;
+
+       qus = "";
+       qus = ` <div class="qustion-cont" id="${id}">
+              ${document.getElementById(id).innerHTML}
+              </div>`;
+        quiz_status.html += qus;
+        document.getElementById(id).remove()
+    });
+
+    document.getElementById("submit_button").remove()
+
+
+
 }
 
 function loadQustions(){
@@ -38,7 +56,6 @@ function loadQustions(){
     if(quiz_status.lang == "EN"){
         qustions = quationsEN;
         languageClass = "en-font";
-
     }else if(quiz_status.lang == "AR"){
         qustions = quationsAR;
         languageClass = "ar-font";
@@ -71,6 +88,8 @@ function loadQustions(){
     })
 
     document.body.innerHTML += `<button id="submit_button" type="submit" class="${languageClass}" onclick="submitAll()"> ${t(quiz_status.lang,"submit")} </button>`;    
+
+
 }
 
 
@@ -93,9 +112,6 @@ function submitAll(){
         quiz_status.score += parseInt(item.attributes.value.value);
     })
     correctAnswers();
-    button = document.getElementById("submit_button");
-    button.setAttribute('onclick','backToResult()')
-    button.innerHTML = t(quiz_status.lang,"back");
     scorePercantage = calcScorePercentage();
     duration = scorePercantage > 50 ? scorePercantage > 75 ? 8000:6000 : scorePercantage > 35 ? 4000:2000;    
     document.getElementById("result").classList.add("show_result");
@@ -169,10 +185,35 @@ function calcScorePercentage(){
 
 
 function showAnswers(){
+    languageClass = ""
+    if(quiz_status.lang == "EN"){
+        languageClass = "en-font";
+    }else if(quiz_status.lang == "AR"){
+        languageClass = "ar-font";
+    }else if(quiz_status.lang == "EN"){
+        languageClass = "en-font";
+    }else if(quiz_status.lang == "EN"){
+        languageClass = "ch-font";
+    }
+    document.body.innerHTML += quiz_status.html+`<button id="submit_button" type="submit" class="${languageClass}" onclick="backToResult()"> ${t(quiz_status.lang,"back")} </button>`;
     document.getElementById("result").classList.remove("show_result");
+
 }
 
 function backToResult(){
+    allQustions = document.querySelectorAll(".qustion-cont");
+    allQustions.forEach( qus => {
+       id = qus.attributes.id.value;
+
+       qus = "";
+       qus = ` <div class="qustion-cont" id="${id}">
+              ${document.getElementById(id).innerHTML}
+              </div>`;
+        quiz_status.html += qus;
+        document.getElementById(id).remove()
+    });
+
+    document.getElementById("submit_button").remove()
     document.getElementById("result").classList.add("show_result");
 }
 
@@ -203,3 +244,4 @@ function shuffle(array) {
   
     return array;
 }
+

@@ -6,6 +6,9 @@ html,body{
     font-family: 'Open Sans', sans-serif;
 }
 
+.body{
+    z-index: 1;
+}
 .ar-font{
     font-family: 'Tajawal', sans-serif !important;
     direction: rtl;

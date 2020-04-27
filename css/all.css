@@ -8,6 +8,7 @@ html,body{
 
 .ar-font{
     font-family: 'Tajawal', sans-serif !important;
+    direction: rtl;
 }
 
 .en-font{

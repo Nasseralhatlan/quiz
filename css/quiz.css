@@ -66,6 +66,15 @@ span{
     background-color: #1b55e2 !important;
 }
 
+.correct{
+    background-color: #8dbf42 !important;
+}
+
+.incorrect{
+    background-color: #d62c2c !important;
+}
+
+
 button{
     background-color: #8dbf42;
     border: 0px;

@@ -132,6 +132,7 @@ function submitAll(){
 function start(lang){
     if(!started){
         started = true;
+        sound.play()
         if(lang == "ar"){
             quiz_status.lang = "AR"
             loadQustions();

@@ -72,9 +72,12 @@ function loadQustions(){
         qustions = quationsCH;
         languageClass = "ch-font";
     }
-
+  
+    counter = 0 ;
     shuffle(qustions).forEach((qus,id) => {
-        
+       
+        html = ``;
+        if(counter == 6 || counter == 12 || counter == 20 || counter == 25){
         html = `
                 <div class="qustion-cont" id="${id}">
                 <img src="${qus.img}" alt="">
@@ -88,13 +91,38 @@ function loadQustions(){
                     <div onclick="chooseAnswer(event)"class="col option ${languageClass}" id="${id}.4" value="${quiz_status.lang == "AR" ?qus.ans4[0]:qus.ans4[1]}">  ${quiz_status.lang == "AR" ?qus.ans4[1]:qus.ans4[0]} </div>
                 </div>
                 </div>
+                <div id="721521352" class="qustion-cont">
+                <script type="text/javascript">
+                    try {
+                        window._mNHandle.queue.push(function (){
+                            window._mNDetails.loadTag("721521352", "300x250", "721521352");
+                        });
+                    }
+                    catch (error) {}
+                </script>
+            </div>
             `;
-
+        }else{
+            html = `
+            <div class="qustion-cont" id="${id}">
+            <img src="${qus.img}" alt="">
+            <span class="${languageClass}" >${qus.txt}</span>
+            <div class="row">
+                <div onclick="chooseAnswer(event)" class="col option ${languageClass}" id="${id}.1" value="${quiz_status.lang == "AR" ?qus.ans1[0]:qus.ans1[1]}"> ${quiz_status.lang == "AR" ?qus.ans1[1]:qus.ans1[0]} </div>
+                <div onclick="chooseAnswer(event)" class="col option ${languageClass}" id="${id}.2" value="${quiz_status.lang == "AR" ? qus.ans2[0]:qus.ans2[1]}"> ${quiz_status.lang == "AR" ?qus.ans2[1]:qus.ans2[0]} </div>
+            </div>
+            <div class="row">
+                <div onclick="chooseAnswer(event)"class="col option ${languageClass}" id="${id}.3" value="${quiz_status.lang == "AR" ?qus.ans3[0]:qus.ans3[1]}"> ${quiz_status.lang == "AR" ?qus.ans3[1]:qus.ans3[0]} </div>
+                <div onclick="chooseAnswer(event)"class="col option ${languageClass}" id="${id}.4" value="${quiz_status.lang == "AR" ?qus.ans4[0]:qus.ans4[1]}">  ${quiz_status.lang == "AR" ?qus.ans4[1]:qus.ans4[0]} </div>
+            </div>
+            </div>`;
+        }
             document.body.innerHTML += html;
+            counter++ ;
     })
 
-    document.body.innerHTML += `<button id="submit_button" type="submit" class="${languageClass}" onclick="submitAll()"> ${t(quiz_status.lang,"submit")} </button>`;    
 
+    document.body.innerHTML += `<button id="submit_button" type="submit" class="${languageClass}" onclick="submitAll()"> ${t(quiz_status.lang,"submit")} </button>`;    
 
 }
 

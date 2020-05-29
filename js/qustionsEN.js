@@ -262,7 +262,7 @@ const quationsEN = [
         img : "./img/qustions/Q33.jpg",
         ans1 : ["2014",0],
         ans2 : ["2015",0],
-        ans3 : ["2016",1],
+        ans3 : ["2018",1],
         ans4 : ["2017",0],
     },
     {

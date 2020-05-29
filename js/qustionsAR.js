@@ -260,7 +260,7 @@ const quationsAR = [
         img: "./img/qustions/Q33.jpg",
         ans1: [0,"2014"],
         ans2: [0,"2015"],
-        ans3: [1,"2016"],
+        ans3: [1,"2018"],
         ans4: [0,"2017"],
         },
         {

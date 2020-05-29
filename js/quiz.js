@@ -70,7 +70,7 @@ function loadQustions(){
     shuffle(qustions).forEach((qus,id) => {
        
         html = ``;
-        if(counter == 6 || counter == 12 || counter == 20 || counter == 25){
+        if(counter == 6 || counter == 11 || counter == 16 || counter == 21 || counter == 26){
         html = `
                 <div class="qustion-cont" id="${id}">
                 <img src="${qus.img}" alt="">
@@ -84,16 +84,11 @@ function loadQustions(){
                     <div onclick="chooseAnswer(event)"class="col option ${languageClass}" id="${id}.4" value="${quiz_status.lang == "AR" ?qus.ans4[0]:qus.ans4[1]}">  ${quiz_status.lang == "AR" ?qus.ans4[1]:qus.ans4[0]} </div>
                 </div>
                 </div>
-                <div id="721521352" class="qustion-cont">
-                <script type="text/javascript">
-                    try {
-                        window._mNHandle.queue.push(function (){
-                            window._mNDetails.loadTag("721521352", "300x250", "721521352");
-                        });
-                    }
-                    catch (error) {}
-                </script>
-            </div>
+                <a href="https://bandsio.com/products/resistance-bands-set" target="_blank">
+                <div class="qustion-cont">
+                <img src="./img/ad/ad_1.png" alt="">
+                </div>
+                </a>
             `;
         }else{
             html = `
@@ -115,7 +110,13 @@ function loadQustions(){
     })
 
 
-    document.body.innerHTML += `<button id="submit_button" type="submit" class="${languageClass}" onclick="submitAll()"> ${t(quiz_status.lang,"submit")} </button>`;    
+    document.body.innerHTML += `
+    <a href="https://bandsio.com/products/resistance-bands-set" target="_blank">
+                <div class="qustion-cont">
+                <img src="./img/ad/ad_1.png" alt="">
+                </div>
+    </a>
+    <button id="submit_button" type="submit" class="${languageClass}" onclick="submitAll()"> ${t(quiz_status.lang,"submit")} </button>`;    
 
 }
 

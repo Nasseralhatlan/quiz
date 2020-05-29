@@ -50,13 +50,6 @@ function correctAnswers(){
 }
 
 function loadQustions(){
-    allQustions = document.querySelectorAll(".qustion-cont");
-    allQustions.forEach( qus => {
-       id = qus.attributes.id.value;
-        document.getElementById(id).remove()
-    });
-    document.getElementById("submit_button").remove()
-
     qustions = quationsEN;
     languageClass = ""
     if(quiz_status.lang == "EN"){

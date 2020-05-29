@@ -31,17 +31,31 @@ function correctAnswers(){
        }
     })
 
-    allQustions = document.querySelectorAll(".qustion-cont");
+    counter = 0 ;
+    allQustions = document.querySelectorAll(".qustion-cont");    
     allQustions.forEach( qus => {
        id = qus.attributes.id.value;
-
-       qus = "";
+       if(counter == 6 || counter == 11 || counter == 16 || counter == 21 || counter == 26 || counter == 35){
+        quiz_status.html += ` <a href="https://bandsio.com/products/resistance-bands-set" target="_blank">
+                            <div class="ad" >
+                            <img src="./img/ad/ad_1.png" alt="">
+                            </div>
+                            </a>`
+                            ;
+       }
+        qus = "";
        qus = ` <div class="qustion-cont" id="${id}">
               ${document.getElementById(id).innerHTML}
               </div>`;
         quiz_status.html += qus;
         document.getElementById(id).remove()
+        counter++ ;
     });
+
+    allAds = document.querySelectorAll(".ad");
+    allAds.forEach( ad => {
+        ad.remove();
+    })
 
     document.getElementById("submit_button").remove()
 
@@ -85,7 +99,7 @@ function loadQustions(){
                 </div>
                 </div>
                 <a href="https://bandsio.com/products/resistance-bands-set" target="_blank">
-                <div class="qustion-cont">
+                <div class="ad" >
                 <img src="./img/ad/ad_1.png" alt="">
                 </div>
                 </a>
@@ -112,7 +126,7 @@ function loadQustions(){
 
     document.body.innerHTML += `
     <a href="https://bandsio.com/products/resistance-bands-set" target="_blank">
-                <div class="qustion-cont">
+                <div class="ad">
                 <img src="./img/ad/ad_1.png" alt="">
                 </div>
     </a>

@@ -42,3 +42,37 @@ html,body{
 a{
     text-decoration: none;
 }
+
+
+.ad{
+    position: relative;
+    width: 95vw;
+    height: auto;
+    left: 2.5vw;
+    right: 2.5vw;
+    padding-top: 10px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+.ad img{
+    position: relative;
+    width: 100%;
+    max-height: 95vw;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+@media (min-width: 768px) {
+    .ad{
+        position: relative;
+        width: 50vw;
+        height: auto;
+        left: 25vw;
+        right: 25vw;
+        padding-top: 20px;
+        margin-bottom: 50px;
+        border-radius: 10px;
+    }
+}
